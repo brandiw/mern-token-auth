@@ -3,12 +3,10 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
 var User = require('../models/user');
-var bcrypt = require('bcrypt');
-var expressJWT = require('express-jwt');
 var jwt = require('jsonwebtoken');
 
 // POST /auth/login route - returns a JWT
-router.post('/login', function(req, res, next) {
+router.post('/login', function(req, res) {
   console.log('/auth/login post route', req.body);
 
   // Find out if the user exists (for login, they should)
@@ -73,10 +71,9 @@ router.post('/signup', function(req, res) {
 });
 
 // This is checked on a browser refresh
-router.post('/me/from/token', function(req, res, next) {
-  // check header or url parameters or post parameters for token
-  console.log('find user from token', req.body);
-  res.send('keep logged in');
+router.post('/me/from/token', function(req, res) {
+  console.log('find user from token');
+  res.send({ user: req.user });
 });
 
 module.exports = router;
