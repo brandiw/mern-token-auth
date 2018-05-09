@@ -3,15 +3,32 @@
 
 # Demo
 
-Coming soon
+Coming soon!
 
 # Technologies Used
 * Mongodb
 * Express
 * React
-* Node.js
+* Node
 
-# React Components
+## React Components
+* Auth components
+  * Login: sucess redirects to profile page
+  * Signup: sucess redirects to profile page
+* Layout components
+  * Nav
+  * Footer
+* Home (stub)
+* Profile: Authorized route - logged in users only
+
+## Technical Notes
+
+A single page application (SPA) that uses react-router and axios to interact with a very loosely coupled back-end. The back-end can sign up, log in, or verify a user using JSON web tokens (JWTs). 
+
+### Decoupling Instructions
+* Enable CORS on back-end routes
+* Delete /* route from app.js
+* In React, use full links instead of relative links in axios calls
 
 # Backend Routes
 METHOD | URL | Purpose
@@ -19,5 +36,10 @@ METHOD | URL | Purpose
 POST | /auth/signup | Adds new user to user database
 POST | /auth/login | Authenticates login details
 POST | /auth/me/from/token | Checks if token is present on browser refresh
+
+## Still To Do
+* Make detailed and user-friendly alerts for error/success messages 
+* Make more authorized pages
+* Use cookies instead of localStorage
 
 
