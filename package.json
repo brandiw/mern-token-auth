@@ -1,9 +1,9 @@
 {
-  "name": "mernBoilerplate",
+  "name": "mern-token-auth",
   "version": "0.0.0",
   "private": true,
+  "main": "app.js",
   "scripts": {
-    "start": "node ./bin/www",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "dependencies": {
