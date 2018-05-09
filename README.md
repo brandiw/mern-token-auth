@@ -12,9 +12,9 @@ Coming soon!
 * Node
 
 ## React Components
-* Auth components
-  * Login: sucess redirects to profile page
-  * Signup: sucess redirects to profile page
+* Auth components: success redirects to profile page
+  * Login
+  * Signup
 * Layout components
   * Nav
   * Footer
@@ -29,6 +29,7 @@ A single page application (SPA) that uses react-router and axios to interact wit
 * Enable CORS on back-end routes
 * Delete /* route from app.js
 * In React, use full links instead of relative links in axios calls
+* Consider moving client and server to separate locations
 
 # Backend Routes
 METHOD | URL | Purpose
